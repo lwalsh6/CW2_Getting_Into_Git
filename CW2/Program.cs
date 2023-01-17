@@ -8,26 +8,37 @@ namespace CW2
 {
     class Program //Class name, can be changed
     {
-        private int steve;
-
-        public void setSteve(int s)
-        {
-            steve = s;
-        }
-        public int getSteve()
-        {
-            return steve;
-        }
-
         static void Main(string[] args)
         {
             Program p = new Program();
-            Console.WriteLine("Hello World!" + 5);
+            
+            int userGuess;
+            int cpuGuess;
+
+            Random rnd = new Random();
+            cpuGuess = rnd.Next(0, 100);
+
+            Console.WriteLine("Hello World!!!");
+            Console.WriteLine("Welcome to Super Totally Fun Random Number Guessing Game! Guess numbers 0-100");
+            Console.Write("Enter Your Guess: ");
+            userGuess = Convert.ToInt32(Console.ReadLine());
             Console.ReadKey();
-            Console.WriteLine("Setting Steve to 4");
-            p.setSteve(4);
-            Console.WriteLine("Steve is: " + p.getSteve());
+
+            Console.WriteLine("User's Answer:  " + userGuess);
+            Console.WriteLine("Correct Answer: " + cpuGuess);
+            Console.WriteLine();
             Console.ReadKey();
+
+            if (userGuess == cpuGuess)
+            {
+                Console.WriteLine("You Won");
+                Console.ReadKey();
+            }
+            else
+            {
+                Console.WriteLine("You Failed, MISERABLY!");
+                Console.ReadKey();
+            }
         }
     }
 }
