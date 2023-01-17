@@ -16,11 +16,17 @@ namespace CW2
             int cpuGuess;
 
             Random rnd = new Random();
-            cpuGuess = rnd.Next(0, 100);
 
-            Console.WriteLine(cpuGuess);
             Console.WriteLine("Hello World!!!");
-            Console.WriteLine("Welcome to Super Totally Fun Random Number Guessing Game! Guess numbers 0-100");
+            Console.WriteLine("Welcome to Super Totally Fun Random Number Guessing Game!");
+
+            Console.Write("Enter Min: ");
+            int rndMin = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter Max: ");
+            int rndMax = Convert.ToInt32(Console.ReadLine());
+
+            cpuGuess = rnd.Next(rndMin, rndMax);
+
             Console.Write("Enter Your Guess: ");
             userGuess = Convert.ToInt32(Console.ReadLine());
             Console.ReadKey();
