@@ -10,7 +10,8 @@ using System.Threading.Tasks;
 
 namespace CW2
 {
-    class Program //Class name, can be changed
+    //Class name, can be changed
+    class Program 
     {
         static void Main(string[] args)
         {
