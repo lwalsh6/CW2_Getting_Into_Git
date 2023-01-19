@@ -35,6 +35,14 @@ namespace CW2
             while (userGuess != cpuGuess)
             {
                 Console.WriteLine("You Failed, MISERABLY!");
+                if (userGuess > cpuGuess)
+                {
+                    Console.WriteLine("Too High");
+                }
+                else if (userGuess < cpuGuess)
+                {
+                    Console.WriteLine("Too Low");
+                }
                 tries++;
                 Console.Write("Guess Again: ");
                 userGuess = Convert.ToInt32(Console.ReadLine());
